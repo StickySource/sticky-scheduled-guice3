@@ -12,14 +12,14 @@
  */
 package net.stickycode.scheduled.guice3;
 
-import net.stickycode.stereotype.scheduled.Scheduled;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
 
-public class ScheduleTestObject {
+import net.stickycode.scheduled.StickyScheduledTck;
 
-  int counter = 0;
+@SuiteClasses({ StickyScheduledTck.class })
+@RunWith(Suite.class)
+public class Guice3ScheduledTck{
 
-  @Scheduled
-  public void runIt() {
-    counter++;
-  }
 }
